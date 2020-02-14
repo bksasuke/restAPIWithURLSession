@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     let rest = RestManager()
-    
+    var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,21 +32,23 @@ class ViewController: UIViewController {
         
         // The following will make RestManager create the following URL:
         // https://reqres.in/api/users?page=2
-         rest.urlQueryParameters.add(value: "2", forKey: "page")
+        rest.urlQueryParameters.add(value: "2", forKey: "page")
         
         rest.makeRequest(toURL: url, withHttpMethod: .get) { (results) in
             if let data = results.data {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                guard let userData = try? decoder.decode(UserData.self, from: data) else { return }
+                guard let userData = try? decoder.decode(UserData.self, from: data),
+                    let user = userData.data else { return }
                 print(userData.description)
+                self.users = user
             }
             
             if let _ = results.data, let response = results.response {
-                           if response.httpStatusCode != 200 {
-                               print("\nRequest failed with HTTP status code", response.httpStatusCode, "\n")
-                           }
-                       }
+                if response.httpStatusCode != 200 {
+                    print("\nRequest failed with HTTP status code", response.httpStatusCode, "\n")
+                }
+            }
             
             print("\n\nResponse HTTP Headers:\n")
             
