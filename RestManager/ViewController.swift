@@ -9,12 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     let rest = RestManager()
     var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Start loading Indicator
+        
+        activityIndicator.startAnimating()
         
         // Uncomment any method you would like to test.
         // Results are printed on the console.
@@ -23,9 +29,7 @@ class ViewController: UIViewController {
         // getNonExistingUser()
         //createUser()
         //getSingleUser()
-        
     }
-
     
     func getUsersList() {
         guard let url = URL(string: "https://reqres.in/api/users") else { return }
@@ -42,6 +46,10 @@ class ViewController: UIViewController {
                     let user = userData.data else { return }
                 print(userData.description)
                 self.users = user
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                }
+                
             }
             
             if let _ = results.data, let response = results.response {
@@ -50,13 +58,13 @@ class ViewController: UIViewController {
                 }
             }
             
-            print("\n\nResponse HTTP Headers:\n")
+//            print("\n\nResponse HTTP Headers:\n")
             
-            if let response = results.response {
-                for (key, value) in response.headers.allValues() {
-                    print(key, value)
-                }
-            }
+//            if let response = results.response {
+//                for (key, value) in response.headers.allValues() {
+//                    print(key, value)
+//                }
+//            }
         }
     }
     
@@ -118,4 +126,10 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func buttonClick(_ sender: Any) {
+        
+        
+    }
+    
 }

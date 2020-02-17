@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C0292E0222645B350077CFA3 /* RestManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0292E0222645B350077CFA3 /* RestAPIWithURLSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestAPIWithURLSession.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0292E0522645B350077CFA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0292E0722645B350077CFA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C0292E0A22645B350077CFA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		C0292E0322645B350077CFA3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0292E0222645B350077CFA3 /* RestManager.app */,
+				C0292E0222645B350077CFA3 /* RestAPIWithURLSession.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C0292E0122645B350077CFA3 /* RestManager */ = {
+		C0292E0122645B350077CFA3 /* RestAPIWithURLSession */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0292E1422645B380077CFA3 /* Build configuration list for PBXNativeTarget "RestManager" */;
+			buildConfigurationList = C0292E1422645B380077CFA3 /* Build configuration list for PBXNativeTarget "RestAPIWithURLSession" */;
 			buildPhases = (
 				C0292DFE22645B350077CFA3 /* Sources */,
 				C0292DFF22645B350077CFA3 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = RestManager;
+			name = RestAPIWithURLSession;
 			productName = RestManager;
-			productReference = C0292E0222645B350077CFA3 /* RestManager.app */;
+			productReference = C0292E0222645B350077CFA3 /* RestAPIWithURLSession.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C0292DFD22645B350077CFA3 /* Build configuration list for PBXProject "RestManager" */;
+			buildConfigurationList = C0292DFD22645B350077CFA3 /* Build configuration list for PBXProject "RestAPIWithURLSession" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0292E0122645B350077CFA3 /* RestManager */,
+				C0292E0122645B350077CFA3 /* RestAPIWithURLSession */,
 			);
 		};
 /* End PBXProject section */
@@ -325,7 +325,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C0292DFD22645B350077CFA3 /* Build configuration list for PBXProject "RestManager" */ = {
+		C0292DFD22645B350077CFA3 /* Build configuration list for PBXProject "RestAPIWithURLSession" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0292E1222645B380077CFA3 /* Debug */,
@@ -334,7 +334,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0292E1422645B380077CFA3 /* Build configuration list for PBXNativeTarget "RestManager" */ = {
+		C0292E1422645B380077CFA3 /* Build configuration list for PBXNativeTarget "RestAPIWithURLSession" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0292E1522645B380077CFA3 /* Debug */,
